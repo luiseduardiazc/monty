@@ -34,6 +34,11 @@ typedef struct instruction_s
 	char *opcode;
 	void (*f)(stack_t **stack, unsigned int line_number);
 } instruction_t;
+typedef struct global_s
+{
+	char *line;
+} global_t;
+extern global_t global;
 
 void push(stack_t **stack, unsigned int n);
 void file_process(char *path, stack_t **stack);

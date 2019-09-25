@@ -5,6 +5,7 @@
  * @argv: argv
  * Return: exit status
  */
+global_t global;
 int main(int argc, char **argv)
 {
 	stack_t *head;
