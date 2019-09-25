@@ -16,7 +16,7 @@ void get_option(char *op, stack_t **stack, unsigned int line_number)
 		{NULL, NULL}
 	};
 
-	while (instructions[i].opcode != NULL)
+	while (instructions[i].opcode != NULL && op != NULL)
 	{
 		if (strcmp(instructions[i].opcode, op) == 0)
 		{
