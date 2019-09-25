@@ -37,4 +37,6 @@ typedef struct instruction_s
 void push(stack_t **stack, unsigned int n);
 void file_process(char *path, stack_t **stack);
 void get_option(char *op, stack_t **stack, unsigned int line_number);
+void pall(stack_t **stack, unsigned int number_line);
 #endif
+

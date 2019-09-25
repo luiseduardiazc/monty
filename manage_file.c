@@ -48,11 +48,3 @@ void file_process(char *path, stack_t **stack)
 	if (line)
 		free(line);
 }
-void push(stack_t **stack, unsigned int n)
-{
-	(void)stack;
-	(void)n;
-	char *param;
-	param = strtok(NULL, delimiter);
-	printf("puts implementation %s\n", param);
-}

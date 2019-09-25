@@ -5,6 +5,7 @@ void get_option(char *op, stack_t **stack, unsigned int line_number)
 
 	instruction_t instructions[] = {
 			{"push", push},
+			{"pall", pall},
 			{NULL, NULL}
 	};
 
