@@ -35,4 +35,5 @@ typedef struct instruction_s
 } instruction_t;
 
 void push(stack_t **head, unsigned int n);
+void file_process(char *path, stack_t *head);
 #endif

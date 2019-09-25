@@ -1,7 +1,20 @@
 #include "monty.h"
-int main() {
-    instruction_t instruction;
-    instruction.opcode = "yo";
-    printf("%s", instruction.opcode);
-    return 0;
+/**
+ * main - main
+ * @argc: argc
+ * @argv: argv
+ * Return: exit status
+ */
+int main(int argc, char **argv)
+{
+	stack_t *head;
+
+	head = NULL;
+	if (argc != 2)
+	{
+		fprintf(stderr, "USAGE: monty file\n");
+		exit(EXIT_FAILURE);
+	}
+	file_process(argv[1], head);
+	return (EXIT_SUCCESS);
 }
