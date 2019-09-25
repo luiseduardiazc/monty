@@ -3,6 +3,7 @@
 #include <stdio.h>
 #include <string.h>
 #include <stdlib.h>
+#include <ctype.h>
 #define delimiter " \t\n\r"
 /**
 * struct stack_s - doubly linked list representation of a stack
