@@ -32,8 +32,13 @@ int get_arg(unsigned int line_number)
 		fprintf(stderr, "L%u: usage: push integer\n", line_number);
 		exit(EXIT_FAILURE);
 	}
-	if (is_number(arg))
-		number = atoi(arg);
+	if (!is_number(arg))
+	{
+		fprintf(stderr, "L%u: usage: push integer\n", line_number);
+		exit(EXIT_FAILURE);
+	}
+	number = atoi(arg);
+
 	return (number);
 }
 /**
