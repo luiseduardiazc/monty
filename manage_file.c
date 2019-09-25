@@ -18,7 +18,7 @@ char *get_filename(char *path)
 /**
  * file_process - file_process
  * @path: path
- * @head: struct type stack_t
+ * @stack: struct type stack_t
  * Return: Nothing
  */
 void file_process(char *path, stack_t **stack)
