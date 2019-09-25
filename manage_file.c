@@ -21,11 +21,12 @@ char *get_filename(char *path)
  * @head: struct type stack_t
  * Return: Nothing
  */
-void file_process(char *path, stack_t *head)
+void file_process(char *path, stack_t **stack)
 {
 	FILE *fp;
-	char *filename;
+	char *filename = NULL;
 	char *line = NULL;
+	char *op = NULL;
 	size_t len = 0, count_lines = 1;
 	ssize_t read;
 
@@ -38,8 +39,20 @@ void file_process(char *path, stack_t *head)
 	}
 	while ((read = getline(&line, &len, fp)) != -1)
 	{
-		printf("number line %d", (int)count_lines);
-		printf("%s", line);
+		op = strtok(line, delimiter);
+		get_option(op, stack, count_lines);
 		count_lines++;
 	}
+
+	fclose(fp);
+	if (line)
+		free(line);
+}
+void push(stack_t **stack, unsigned int n)
+{
+	(void)stack;
+	(void)n;
+	char *param;
+	param = strtok(NULL, delimiter);
+	printf("puts implementation %s\n", param);
 }

@@ -3,7 +3,7 @@
 #include <stdio.h>
 #include <string.h>
 #include <stdlib.h>
-
+#define delimiter " \t\n\r"
 /**
 * struct stack_s - doubly linked list representation of a stack
 * @n: integer
@@ -34,6 +34,7 @@ typedef struct instruction_s
 	void (*f)(stack_t **stack, unsigned int line_number);
 } instruction_t;
 
-void push(stack_t **head, unsigned int n);
-void file_process(char *path, stack_t *head);
+void push(stack_t **stack, unsigned int n);
+void file_process(char *path, stack_t **stack);
+void get_option(char *op, stack_t **stack, unsigned int line_number);
 #endif

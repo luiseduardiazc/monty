@@ -15,6 +15,6 @@ int main(int argc, char **argv)
 		fprintf(stderr, "USAGE: monty file\n");
 		exit(EXIT_FAILURE);
 	}
-	file_process(argv[1], head);
+	file_process(argv[1], &head);
 	return (EXIT_SUCCESS);
 }
