@@ -56,5 +56,6 @@ void pall(stack_t **stack, unsigned int number_line);
 void free_stack(stack_t *head);
 void make_free_error(stack_t *head);
 void pint(stack_t **stack, unsigned int number_line);
+void pop(stack_t **stack, unsigned int number_line);
 #endif
 
