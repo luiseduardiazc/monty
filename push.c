@@ -27,6 +27,7 @@ int get_arg(unsigned int line_number, stack_t *stack)
 {
 	char *arg = NULL;
 	int number = 0;
+	int len;
 
 	arg = strtok(NULL, delimiter);
 	if (arg == NULL)
@@ -35,11 +36,18 @@ int get_arg(unsigned int line_number, stack_t *stack)
 		make_free_error(stack);
 		exit(EXIT_FAILURE);
 	}
-	if (!is_number(arg) || (arg[0] == '-' && atoi(arg) == 0))
+
+	len = strlen(arg);
+	while (len--)
 	{
-		fprintf(stderr, "L%u: usage: push integer\n", line_number);
-		make_free_error(stack);
-		exit(EXIT_FAILURE);
+		if (len == 0 && arg[len] == '-')
+			break;
+		if (arg[len] > 57 || arg[len] < 48)
+		{
+			fprintf(stderr, "L%u: usage: push integer\n", line_number);
+			make_free_error(stack);
+			exit(EXIT_FAILURE);
+		}
 	}
 	number = atoi(arg);
 
