@@ -34,7 +34,7 @@ void get_option(char *op, stack_t **stack, unsigned int line_number)
 		}
 		i++;
 	}
-	if (instructions[i].opcode == NULL)
+	if (instructions[i].opcode == NULL && op[0] != '#')
 	{
 		fprintf(stderr, "L%u: unknown instruction %s\n", line_number, op);
 		make_free_error(*stack);
