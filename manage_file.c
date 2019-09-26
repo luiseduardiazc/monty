@@ -33,8 +33,8 @@ void file_process(char *path, stack_t **stack)
 	global.fp = fopen(path, "r");
 	if (global.fp == NULL)
 	{
-		filename = get_filename(path);
-		fprintf(stderr, "Error: Can't open file %s\n", filename);
+		/* filename = get_filename(path); */
+		fprintf(stderr, "Error: Can't open file %s\n", path);
 		make_free_error(*stack);
 		exit(EXIT_FAILURE);
 	}
