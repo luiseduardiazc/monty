@@ -1,11 +1,11 @@
 #include "monty.h"
+global_t global;
 /**
  * main - main
  * @argc: argc
  * @argv: argv
  * Return: exit status
  */
-global_t global;
 int main(int argc, char **argv)
 {
 	stack_t *head;
