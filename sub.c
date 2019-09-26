@@ -9,7 +9,7 @@ void sub(stack_t **stack, unsigned int number_line)
 {
 	stack_t *current = *stack;
 	stack_t *next_node = NULL;
-	int sum;
+	int result;
 
 	if (dlenlist(*stack) < 2)
 	{
@@ -21,8 +21,8 @@ void sub(stack_t **stack, unsigned int number_line)
 	while (current != NULL)
 	{
 		next_node = current->next;
-		sum = current->n - next_node->n;
-		next_node->n = sum;
+		result = next_node->n - current->n;
+		next_node->n = result;
 		pop(stack, number_line);
 		break;
 	}
