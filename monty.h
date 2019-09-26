@@ -59,5 +59,6 @@ void pint(stack_t **stack, unsigned int number_line);
 void pop(stack_t **stack, unsigned int number_line);
 size_t dlenlist(const stack_t *h);
 void swap(stack_t **stack, unsigned int number_line);
+void add(stack_t **stack, unsigned int number_line);
 #endif
 
