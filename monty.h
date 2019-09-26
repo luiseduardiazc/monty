@@ -34,9 +34,18 @@ typedef struct instruction_s
 	char *opcode;
 	void (*f)(stack_t **stack, unsigned int line_number);
 } instruction_t;
+/**
+* struct global_s - global structure
+* @line: pointer used by strtok
+* @fp: pointer used by open file
+*
+* Description: opcode and its function
+* for stack, queues, LIFO, FIFO Holberton project
+*/
 typedef struct global_s
 {
 	char *line;
+	FILE *fp;
 } global_t;
 extern global_t global;
 
@@ -44,5 +53,7 @@ void push(stack_t **stack, unsigned int n);
 void file_process(char *path, stack_t **stack);
 void get_option(char *op, stack_t **stack, unsigned int line_number);
 void pall(stack_t **stack, unsigned int number_line);
+void free_stack(stack_t *head);
+void make_free_error(stack_t *head);
 #endif
 
