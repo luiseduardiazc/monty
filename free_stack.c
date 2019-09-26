@@ -10,6 +10,7 @@ void make_free_error(stack_t *head)
 		free(global.line);
 	if (global.fp)
 		fclose(global.fp);
+
 	free_stack(head);
 }
 /**
