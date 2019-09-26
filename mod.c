@@ -28,7 +28,7 @@ void _mod(stack_t **stack, unsigned int number_line)
 			free(global.line);
 			exit(EXIT_FAILURE);
 		}
-		result = current->n % next_node->n;
+		result = next_node->n % current->n;
 		next_node->n = result;
 		pop(stack, number_line);
 		break;
