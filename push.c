@@ -12,9 +12,8 @@ int is_number(char *str)
 	for (i = 0; i < length; i++)
 		if (str[i] != '-')
 		{
-			if (!isdigit(str[i])) {
+			if (!isdigit(str[i]))
 				return (0);
-			}
 		}
 	return (1);
 }
@@ -36,7 +35,7 @@ int get_arg(unsigned int line_number, stack_t *stack)
 		fprintf(stderr, "L%u: usage: push integer\n", line_number);
 		exit(EXIT_FAILURE);
 	}
-	if (!is_number(arg))
+	if (!is_number(arg) || (arg[0] == '-' && atoi(arg) == 0))
 	{
 		make_free_error(stack);
 		fprintf(stderr, "L%u: usage: push integer\n", line_number);
