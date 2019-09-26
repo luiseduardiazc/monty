@@ -23,9 +23,6 @@ char *get_filename(char *path)
  */
 void file_process(char *path, stack_t **stack)
 {
-
-	char *filename = NULL;
-	/* char *line = NULL; */
 	char *op = NULL;
 	size_t len = 0, count_lines = 1;
 	ssize_t read;
@@ -33,7 +30,6 @@ void file_process(char *path, stack_t **stack)
 	global.fp = fopen(path, "r");
 	if (global.fp == NULL)
 	{
-		/* filename = get_filename(path); */
 		fprintf(stderr, "Error: Can't open file %s\n", path);
 		make_free_error(*stack);
 		exit(EXIT_FAILURE);
