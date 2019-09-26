@@ -9,7 +9,7 @@ void mul(stack_t **stack, unsigned int number_line)
 {
 	stack_t *current = *stack;
 	stack_t *next_node = NULL;
-	int mult;
+	int result;
 
 	if (dlenlist(*stack) < 2)
 	{
@@ -21,8 +21,8 @@ void mul(stack_t **stack, unsigned int number_line)
 	while (current != NULL)
 	{
 		next_node = current->next;
-		mult = current->n * next_node->n;
-		next_node->n = mult;
+		result = next_node->n * current->n;
+		next_node->n = result;
 		pop(stack, number_line);
 		break;
 	}
