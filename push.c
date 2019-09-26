@@ -10,9 +10,11 @@ int is_number(char *str)
 
 	length = strlen(str);
 	for (i = 0; i < length; i++)
-		if (!isdigit(str[i]))
+		if (str[i] != '-')
 		{
-			return (0);
+			if (!isdigit(str[i])) {
+				return (0);
+			}
 		}
 	return (1);
 }
