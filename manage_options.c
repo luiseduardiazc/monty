@@ -18,6 +18,10 @@ void get_option(char *op, stack_t **stack, unsigned int line_number)
 		{"swap", swap},
 		{"add", add},
 		{"nop", nop},
+		{"sub", sub},
+		{"mul", mul},
+		{"div", _div},
+		{"mod", _mod},
 		{NULL, NULL}
 	};
 
