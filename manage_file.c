@@ -35,7 +35,7 @@ void file_process(char *path, stack_t **stack)
 	{
 		filename = get_filename(path);
 		make_free_error(*stack);
-		fprintf(stderr, "Error: Can't open file %s", filename);
+		fprintf(stderr, "Error: Can't open file %s\n", filename);
 		exit(EXIT_FAILURE);
 	}
 
