@@ -126,4 +126,4 @@ julien@ubuntu:~/0x19-stacks_queues_lifo_fifo$
 
 ## Authors
 -  Maribel Serna A
--  Luiz Ramirez
+-  Luis Diaz
