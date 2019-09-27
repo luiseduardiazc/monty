@@ -1,7 +1,7 @@
 #include "monty.h"
 global_t global;
 /**
- * main - main
+ * main - main of our program
  * @argc: argc
  * @argv: argv
  * Return: exit status
