@@ -1,6 +1,6 @@
 #include "monty.h"
 /**
- * make_free_error - make_free_error
+ * make_free_error - make_free_error of the stack 
  * @head: structure type stack_t
  * Return: Nothing
  */
