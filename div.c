@@ -1,6 +1,6 @@
 #include "monty.h"
 /**
- * _div - _div
+ * _div - _div stack program 
  *@stack: structure
  *@number_line: number line
  *Return: Nothing
