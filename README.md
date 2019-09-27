@@ -130,7 +130,8 @@ You can export the current file by clicking **Export to disk** in the menu. You 
 **void make_free_error():** Free memory stack
 
 ## Authors
-**Maribel Serna A**
-**Luiz Ramirez**
+-**Maribel Serna A**
+
+-**Luiz Ramirez**
 
 
